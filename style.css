@@ -1,0 +1,830 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #222;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.section-description {
+    font-size: 22px;
+    color: #666;
+    max-width: 560px;
+    margin: 0 auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.btn-hero {
+    background-color: #fff;
+    color: #0a8fc4;
+}
+
+.btn-hero:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #0a8fc4;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0980b0;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #0a8fc4;
+    border: 2px solid #0a8fc4;
+}
+
+.btn-outline:hover {
+    background-color: #0a8fc4;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-cta {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-cta:hover {
+    background-color: #fff;
+    color: #0a8fc4;
+    transform: translateY(-2px);
+}
+
+.hero.t-cover {
+    height: 100vh;
+    background-image: url('https://static.tildacdn.com/c45bc4c1-2134-49f0-9075-03ee79db00ef/typeawaynumerodos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay.t-cover__filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(26, 40, 120, 0.7), rgba(10, 143, 196, 0.7));
+}
+
+.hero-content.t182__wrapper {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 68px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.hero-description.t-descr.t-descr_lg {
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+    color: #fff;
+    opacity: 1;
+    padding: 15px 0 30px 0;
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.t-animate[data-animate-style="fadeinup"] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-duration: 1s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.t-animate_started[data-animate-style="fadeinup"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.t-animate[data-animate-style="zoomin"] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    transition-duration: 1s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.t-animate_started[data-animate-style="zoomin"] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media screen and (min-width: 980px) {
+    .t-descr.t-animate, .t-subtitle.t-animate, .t-text.t-animate, .t-uptitle.t-animate {
+        transition-duration: .7s;
+    }
+}
+
+.advantages {
+    padding: 150px 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+}
+
+.advantage-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.advantage-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.advantage-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.how-we-teach {
+    padding: 150px 0;
+    background-color: #f0f0f0;
+}
+
+.how-we-teach-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.how-we-teach-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.how-we-teach-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.how-we-teach-text .section-title {
+    text-align: left;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: #0a8fc4;
+    margin: 20px 0 30px;
+}
+
+.how-we-teach-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.steps {
+    padding: 150px 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #0a8fc4;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: #0a8fc4;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.step-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.step-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.steps-button {
+    text-align: center;
+}
+
+.stats {
+    position: relative;
+    height: 400px;
+    padding: 80px 0;
+    background-image: url('https://static.tildacdn.com/tild6266-3535-4035-b335-623361313832/photo144314057015927.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(26, 40, 120, 0.9), rgba(10, 143, 196, 0.9));
+}
+
+.stats-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 68px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.stat-description {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.reviews {
+    padding: 150px 0;
+}
+
+.reviews .section-header {
+    margin-bottom: 90px !important;
+}
+
+.reviews-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.review-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 3px solid #f0f0f0;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.t-text {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.t-text_md {
+    font-size: 18px;
+    line-height: 1.55;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.t605__text {
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.review-text {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 300;
+    color: #000000;
+    margin: 40px 0 32px 0;
+    font-style: italic;
+}
+
+.review-author {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.review-position {
+    color: #888;
+    font-size: 12px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.slider-prev,
+.slider-next {
+    background: none;
+    border: 2px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    border-color: #0a8fc4;
+    color: #0a8fc4;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #0a8fc4;
+}
+
+.cta {
+    padding: 135px 0;
+    background-color: #0a8fc4;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.cta-description {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.footer {
+    padding: 30px 0;
+    background-color: #0a8fc4;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 56px;
+    }
+
+    .section-title,
+    .advantages-title,
+    .how-we-teach-title,
+    .steps-title,
+    .reviews-title {
+        font-size: 32px;
+    }
+
+    .cta-title {
+        font-size: 36px;
+    }
+
+    .section-description {
+        font-size: 20px;
+    }
+
+    .stat-number {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .hero-description.t-descr.t-descr_lg {
+        font-size: 18px;
+    }
+
+    .section-title,
+    .advantages-title,
+    .how-we-teach-title,
+    .steps-title,
+    .reviews-title {
+        font-size: 28px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    .advantage-title {
+        font-size: 24px;
+    }
+
+    .cta-title {
+        font-size: 32px;
+    }
+
+    .cta-description {
+        font-size: 20px;
+    }
+
+    .stat-number {
+        font-size: 48px;
+    }
+    
+    .hero.t-cover {
+        height: 600px;
+    }
+    
+    .advantages,
+    .how-we-teach,
+    .steps,
+    .reviews {
+        padding: 100px 0;
+    }
+    
+    .reviews .section-header {
+        margin-bottom: 40px !important;
+    }
+    
+    .how-we-teach-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .how-we-teach-text .section-title {
+        text-align: center;
+    }
+    
+    .divider {
+        margin: 20px auto 30px;
+    }
+    
+    .how-we-teach-description {
+        text-align: center;
+    }
+    
+    .btn-primary {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description.t-descr.t-descr_lg {
+        font-size: 16px;
+    }
+
+    .section-title,
+    .advantages-title,
+    .how-we-teach-title,
+    .steps-title,
+    .reviews-title {
+        font-size: 24px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    .advantage-title {
+        font-size: 22px;
+    }
+    
+
+    .step-title {
+        font-size: 20px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .cta-description {
+        font-size: 18px;
+    }
+
+    .review-text,
+    .t-text_md {
+        font-size: 16px;
+        margin: 25px 0 20px 0;
+    }
+
+    .review-author {
+        font-size: 18px;
+    }
+
+    .stat-number {
+        font-size: 42px;
+    }
+    
+    .stat-description {
+        font-size: 14px;
+    }
+    
+    .advantages,
+    .how-we-teach,
+    .steps,
+    .reviews {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .reviews .section-header {
+        margin-bottom: 30px !important;
+    }
+    
+    .advantages-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero.t-cover {
+        height: 500px;
+        background-attachment: scroll;
+    }
+    
+    .cta {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-description.t-descr.t-descr_lg {
+        font-size: 16px;
+        padding: 10px 0 20px 0;
+    }
+
+    .section-title,
+    .advantages-title,
+    .how-we-teach-title,
+    .steps-title,
+    .reviews-title {
+        font-size: 22px;
+    }
+
+    .advantage-title {
+        font-size: 20px;
+    }
+
+    .step-title {
+        font-size: 18px;
+    }
+
+    .cta-title {
+        font-size: 24px;
+    }
+
+    .cta-description {
+        font-size: 16px;
+    }
+
+    .review-author {
+        font-size: 16px;
+    }
+
+    .review-position {
+        font-size: 11px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .advantage-description,
+    .step-description {
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .hero.t-cover {
+        height: 450px;
+    }
+    
+    .review-text {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 20px 0 16px 0;
+    }
+}
